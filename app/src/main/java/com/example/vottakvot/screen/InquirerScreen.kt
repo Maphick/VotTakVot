@@ -23,8 +23,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
+import com.example.vottakvot.ViewModel.InquirerViewModel
 import com.example.vottakvot.ViewModel.WelcomeViewModel
 import com.example.vottakvot.navigation.Screen
 import com.example.vottakvot.util.InquirerPage
@@ -41,7 +41,7 @@ import com.google.accompanist.pager.rememberPagerState
 @Composable
 fun InquirerScreen(
     navController: NavHostController,
-    inquirerViewModel: WelcomeViewModel = hiltViewModel()
+    inquirerViewModel: InquirerViewModel
 ) {
     val pages = listOf(
         InquirerPage.First,

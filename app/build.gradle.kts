@@ -1,10 +1,10 @@
-import org.jetbrains.kotlin.kapt3.base.Kapt.kapt
-
 plugins {
     id("com.android.application") //version "8.02" apply false
     //id("com.android.library") //version "8.02" apply false
     id("org.jetbrains.kotlin.android") //version "8.02" apply false
-    id("dagger.hilt.android.plugin") //version "2.40.5" apply false
+    //id("dagger.hilt.android.plugin") //version "2.40.5" apply false
+    //id("kotlin-kapt")
+    //id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -95,8 +95,14 @@ dependencies {
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
     // Dagger - Hilt
-    implementation("com.google.dagger:hilt-android:2.38.1")
-    annotationProcessor("com.google.dagger:hilt-android-compiler:2.38.1")
-    annotationProcessor("androidx.hilt:hilt-compiler:1.0.0")
+    //kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.3.0")
+    //implementation("com.google.dagger:hilt-android:2.42")
+    //kapt("com.google.dagger:hilt-compiler:2.42")
+    //implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
+    /*
+    implementation("com.google.dagger:hilt-android:2.42")
+    kapt("com.google.dagger:hilt-android-compiler:2.42")
+    kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+     */
 }
