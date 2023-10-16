@@ -16,24 +16,26 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.WindowCompat
 
+
 private val DarkColorScheme = darkColorScheme(
-    primary = Color.Black,
+    primary = primary_dark,
     secondary = Color.Black,
     tertiary = Color.Black,
-    background = Color.Black,
-    surface = Color.Black,
+    background = dark_dark,
+    surface = surface_dark,
     onPrimary = Color.Black,
     onSecondary = Color.Red,
+    onSecondaryContainer = on_secondary_container_dark,
     onTertiary = Color.White,
-    onBackground = Color.White,
-    onSurface = Color.White,
+    onBackground = on_background_dark,
+    onSurface = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Color.White,
     secondary = Color.White,
     tertiary = Color.White,
-    background = Color.White,
+    background =  background_light,
     surface = Color.White,
     onPrimary = Color.White,
     onSecondary = Color.Red,
@@ -62,8 +64,8 @@ fun VotTakVotTheme(
     if (!view.isInEditMode) {
         SideEffect {
             val window = (view.context as Activity).window
-            window.statusBarColor = colorScheme.primary.toArgb()
-            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+            // window.statusBarColor = colorScheme.primary.toArgb()
+            // WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
         }
     }
 
